@@ -1,6 +1,7 @@
 import jinja2
 
 from app.helper import file_helper
+from google.appengine.api import memcache
 
 def load(name, data={}):
   # set the file
