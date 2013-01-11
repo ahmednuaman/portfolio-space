@@ -8,7 +8,7 @@ config = webapp2_config
 app = webapp2.WSGIApplication([
   (signup_controller.decorator.callback_path, signup_controller.decorator.callback_handler()),
   ('/admin/', admin_controller.AdminController),
-  ('/signup/', signup_controller.SignupController),
   ('/manage/', manage_controller.ManageController),
-  (r'/([^\/]+)?', profile_controller.ProfileController)
+  (r'/([^\/]+)', profile_controller.ProfileController),
+  ('/', signup_controller.SignupController)
 ], config=config)
