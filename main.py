@@ -1,7 +1,7 @@
 import webapp2
 import webapp2_config
 
-from app.controller import admin_controller, manage_controller, page_controller, signup_controller
+from app.controller import admin_controller, manage_controller, profile_controller, signup_controller
 
 config = webapp2_config
 
@@ -10,5 +10,5 @@ app = webapp2.WSGIApplication([
   ('/admin/', admin_controller.AdminController),
   ('/signup/', signup_controller.SignupController),
   ('/manage/', manage_controller.ManageController),
-  (r'/([^\/]+)?', page_controller.PageController)
+  (r'/([^\/]+)?', profile_controller.ProfileController)
 ], config=config)
