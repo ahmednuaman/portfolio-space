@@ -34,4 +34,5 @@ nosetests.xml
 .project
 .pydevproject
 
+app_config.py
 webapp2_config.py
